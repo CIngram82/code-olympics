@@ -1,10 +1,21 @@
 <!doctype html>
 
 <html>
+
 <head>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="style.css">
+    
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const code = document.querySelectorAll('pre code');
+            code.forEach(block => {
+                block.classList.add('javascript');
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
 </head>
 
 <body><h1>TIY Code Olympics</h1>
@@ -27,44 +38,341 @@
 
 <h3><code>01 : Letter count</code></h3>
 
+<p><em>10 points</em></p>
+
 <p>Given a letter and sentence, output the number of times the letter appears in the sentence.</p>
 
 <p>Example:</p>
 
-<p><code>js
-letterCount('a', 'not again avery!'); // returns 3
-</code></p>
+<pre><code>letterCount('a', 'not again avery!'); // returns 3
+</code></pre>
 
 <h3><code>02 : Letter censor</code></h3>
 
+<p><em>10 points</em></p>
+
 <p>Given a letter and sentence, output the original sentence with all occurences of the specified letter removed.</p>
 
-<p>Example:</p>
+<p>Ex:</p>
 
-<p><code>js
-letterCount('a', 'not again avery!'); // returns 'not gin very!'
-</code></p>
+<pre><code>letterCount('a', 'not again avery!'); // returns 'not gin very!'
+</code></pre>
 
 <h3><code>03 : Order from chaos</code></h3>
 
+<p><em>25 points</em></p>
+
 <p>Given two arrays, return true if the arrays contain the same items or false if they do not. Note that you should still return true if the items are in a different <em>order</em> in each array.</p>
 
-<p>Example:</p>
+<p>Ex:</p>
 
-<p><code>js
-chaos([1, 5, 6, 2], [1, 2, 6, 5]);  // returns true
+<pre><code>chaos([1, 5, 6, 2], [1, 2, 6, 5]);  // returns true
 chaos([1, 2, 3], [11, 2, 3]);       // returns false
 chaos([1, 2, 3], [3, 3, 2, 1]);     // returns false
-</code></p>
+</code></pre>
 
 <h3><code>04 : Counting your chickens</code></h3>
 
+<p><em>15 points</em></p>
+
 <p>Given an array, return true if the array contains each of the numbers from 1 to 5 at least once time each. The array should not contain any other values.</p>
 
-<p><code>js
-chickens([1, 5, 3, 2, 4])    // return true
+<p>Ex:</p>
+
+<pre><code>chickens([1, 5, 3, 2, 4])    // return true
 chickens([1, 1, 2, 3, 4, 5]) // return true
 chickens([1, 2, 5, 4])       // return false
-</code></p>
+</code></pre>
+
+<h3><code>05 : Fizzbuzz</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Write a program that prints the numbers from 1 to 100. For multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print "FizzBuzz".</p>
+
+<h3><code>06 : Mind the gap</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Given an array of numbers, return the difference between the smallest and largest numbers in the array.</p>
+
+<p>Ex:</p>
+
+<pre><code>gap([1, 10, 6, 8, 2])   // return 9
+gap([1, 2, 3])          // return 2
+</code></pre>
+
+<h3><code>07 : A perfect 10</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Given an array of numbers, return true if the numbers add up to 10 and false otherwise.</p>
+
+<p>Ex:</p>
+
+<pre><code>perfect([1, 8, 1])      // return true
+perfect([1, 10, 2, -3]) // return true
+perfect([2, 3, 4])      // return false
+</code></pre>
+
+<h3><code>08 : A perfect 10</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Given an array of numbers, return true if the numbers add up to 10 and false otherwise.</p>
+
+<p>Ex:</p>
+
+<pre><code>perfect([1, 8, 1])      // return true
+perfect([1, 10, 2, -3]) // return true
+perfect([2, 3, 4])      // return false
+</code></pre>
+
+<h3><code>09 : Cops and robbers</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Your function should operate on a single string that contains a series of one of three characters:</p>
+
+<ul>
+<li><code>#</code> : ordinary people</li>
+<li><code>@</code> : a thief</li>
+<li>the digits <code>1-9</code> : a cop</li>
+</ul>
+
+<p>The number marking each cop indicates how many people beside them they can see. If a cop sees a robber, they capture them.</p>
+
+<p>Return the number of robbers that are caught in a given string.</p>
+
+<p>Ex:</p>
+
+<pre><code>cops('#@#1###@@2#@'); // returns 3 (first robber escapes)
+</code></pre>
+
+<h3><code>10 : Finding files</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Given a string representing an absolute path on your computer, return the file name (drop all directory names).</p>
+
+<p>Ex:</p>
+
+<pre><code>filename('/Users/summersanders/code/ambitions.txt') // returns 'ambitions.txt'
+filename('/Users/luke/cities.xls') // returns 'cities.xls'
+</code></pre>
+
+<h3><code>11 : Front and center</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Given a title and subtitle as two separate strings,  return an array containing both strings padded with white space so that the text is centered. The output strings should be as short as possible.</p>
+
+<p>Ex:</p>
+
+<pre><code>padding('Jaws', 'Be Scared of Sharks!') // return ['Be Scared of Sharks!', '        Jaws        ']
+</code></pre>
+
+<h3><code>12 : Jump game</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>You're given an array of numbers, each representing the distance you can move in the forward direction from your current position in the array. Return true if its possible to move from the first to the last element in the array using the specified jump distances, or false otherwise.</p>
+
+<p>Ex:</p>
+
+<pre><code>jump([1, 1, 2])                 // returns true
+jump([1, 2, 0, 3, 1, -1, 7])    // returns false
+jump([1, 1, 2, 0])              // returns false
+</code></pre>
+
+<h3><code>13 : Statue palace</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Everyone loves living near statues. Write a function that accepts a single string as an input and returns the number of 'desirable' houses, where 'desirable' is defined as being within two blocks of a statue. Each character represents a single block, with 'S' representing statues, 'L' representing lots, and 'H' representing houses.</p>
+
+<p>Ex:</p>
+
+<pre><code>statues('SSHLHHHH')     // returns 1
+statues('HLHHSHLSH')    // returns 4
+statues('HLHLLS')       // returns 0
+</code></pre>
+
+<h3><code>14 : Power bills</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Sudenia lives in a pirate village and electricity is in short supply. It costs her one doubloon every hour that her lights are on, but she thinks her power company may be up to no good. She's started recording when she turns her lights on and off, and has enlistened your help for determining what her bill should be.</p>
+
+<p>Help enlighten her by writing a function that can accept a single string composed of three characters: 1 (turned lights on), 0 (turned lights off), and - (didn't adjust lights), and return the number of doubloons she owes for the given period.</p>
+
+<p>Ex:</p>
+
+<pre><code>doubloon('1---0-1-')    // returns 6
+doubloon('1--')         // returns 3
+doubloon('10---')       // returns 1
+</code></pre>
+
+<h3><code>15 : Semantic versioning</code></h3>
+
+<p><em>XX points</em></p>
+
+<p><a href="https://nodesource.com/blog/semver-a-primer/#semverconstruction">Semantic versioning</a> is a popular standard for tracking software versions, and has a strict interpetation for each of the numbers in the version string. Write a function that determines which of two semantic version numbers (specified as strings) refer to the later release, and return that version number.</p>
+
+<p>Ex:</p>
+
+<pre><code>semver('1.2.0', '1.12.0')   // returns '1.12.0'
+semver('1.2.0', '1.2.1')    // returns '1.2.1'
+semver('11.2.1', '2.1.10')  // returns '11.2.1'
+</code></pre>
+
+<h3><code>16 : Junior</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Find the second largest number in an array. If the largest value exists twice, it counts as both the largest and second largest value.</p>
+
+<p>Ex:</p>
+
+<pre><code>junior([1, 5, 4, 1])        // returns 4
+junior([10, 14, 17, 9, 18]) // returns 17
+junior([1, 2, 3, 5, 5])     // returns 5
+</code></pre>
+
+<h3><code>17 : Rosebud</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Some say that there was a cheat code for the original Sims that involved typing the phrase 'rosebud' followed by some number of exclamation points, followed by a 1. The cheat code would give one thousand credits for each exclamation point. Write a function that, when passed a string, returns the number of credits that the Sims would be rewarded with.</p>
+
+<p>Ex:</p>
+
+<pre><code>rosebud('rosebud!!!!1')  // returns 4000
+rosebud('rosebud!1')     // returns 1000
+rosebud('heathcliff')   // returns 0
+</code></pre>
+
+<h3><code>18 : Changemaker</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Given an amount of dollars, return the number of 20, 10, 5, and 1 dollar bills that should be returned to make change for the specified quantity. You should return the smallest number of bills possible.</p>
+
+<p>Ex:</p>
+
+<pre><code>changemaker(47)     // returns [2, 0, 1, 2]
+changemaker(118)    // returns [5, 1, 1, 3]
+changemaker(12)     // returns [0, 1, 0, 2]
+</code></pre>
+
+<h3><code>19 : Parentheses, please</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Accept a string containing some combination of opening and closing parentheses. Return true if all parentheses are 'valid' and false otherwise. </p>
+
+<p>'Valid' parentheses cannot close before they open, and all that are opened must eventually be closed. Nesting parentheses is fine.</p>
+
+<p>Ex:</p>
+
+<pre><code>parens('(())')      // return true
+parens('(')         // return false
+parens(')()()(')    // return false
+parens('(()()())')  // return true
+</code></pre>
+
+<h3><code>20 : Count dupes</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Count the number of duplicated items in an array. Return the number of items that were not the original appearance.</p>
+
+<p>Ex:</p>
+
+<pre><code>dupes([1, 5, 2, 3, 1, 3])   // return 2
+dupes([1, 5, 2, 11])        // return 0
+dupes([1, 1, 1, 1]))        // return 3
+</code></pre>
+
+<h3><code>21 : Doozy</code></h3>
+
+<p><em>XX points</em></p>
+
+<p>Return the longest word in the specified sentence.</p>
+
+<p>Ex:</p>
+
+<pre><code>doozy('there are a ton of contradictory things to debate')  // returns 'contradictory'
+doozy('a lil fox can still run')                            // returns 'still'
+</code></pre>
+
+<h3><code>22 : Multiples</code></h3>
+
+<p>Given two numbers, return an array of all numbers from 1 - 100 that are evenly divisible by both.</p>
+
+<p>Ex:</p>
+
+<pre><code>mults(5, 7)     // return [35, 70]
+mults(2, 20)    // return [20, 40, 60, 80, 100]
+mults(20, 7)    // return []
+</code></pre>
+
+<h3><code>23 : Hamming</code></h3>
+
+<p>Given two strings, return the number of letters that are in the same position in both words. If the strings are not the same length, return 0.</p>
+
+<p>Ex:</p>
+
+<pre><code>hamming('house', 'moose')   // return 3
+hamming('abc', 'abcd')      // return 0
+hamming('tool', 'cold')     // return 1
+</code></pre>
+
+<h3><code>24 : Catching Pokemon</code></h3>
+
+<p>Write a function that accepts an array of numbers. Each element in the array represents a day, and the number represents the number of Pokemon caught on that day. Return an array of the same length that contains the number of total Pokemon caught up to that day.</p>
+
+<p>Ex:</p>
+
+<pre><code>pokemon([1, 5, 8, 2])   // return [1, 6, 14, 16]
+pokemon([4, 4, 4])      // return [4, 8, 12]
+pokemon([6, 2, 8, 1])   // return [6, 8, 16, 17]
+</code></pre>
+
+<h3><code>25 : Mapping functions</code></h3>
+
+<p>Write a function called map that accepts an array and a function as inputs. You should return an array containing the values of the array after the function has been applied to each one.</p>
+
+<p><em>Note: there's a built-in function called map -- you can't use this in your solution!</em></p>
+
+<p>Ex:</p>
+
+<pre><code>function double(num) {
+    return num * num;
+}
+
+map([1, 2, 4], double)  // return [2, 4, 8]
+map[8, 6, 3], double)   // return [16, 12, 6]
+</code></pre>
+
+<h3><code>26 : The gatekeeper</code></h3>
+
+<p>Write a function called filter that accepts an array and a function as arguments. You should return an array containing the values of the array that return true after the function is applied.</p>
+
+<p><em>Note: there's a built-in function called filter -- you can't use this in your solution!</em></p>
+
+<p>Ex:</p>
+
+<pre><code>function reallyBig(num) {
+    if (num &gt; 10) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+filter([11, 12, 4], reallyBig)  // return [11, 12]
+filter[18, 6, 3], reallyBig)    // return [18]
+</code></pre>
     </body>
 </html> 
