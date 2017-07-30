@@ -1,0 +1,27 @@
+
+body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin: 20px;
+    font-size: 1.1em;
+
+    background-color: #fdfdfd;
+    color: #191919;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-top: 60px;
+}
+
+h3:first-of-type {
+    margin-top: 10px;
+}
+
+pre code.hljs {
+    padding: 14px;
+    font-size: 1em;
+    line-height: 30px;
+}
