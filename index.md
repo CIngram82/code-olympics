@@ -90,6 +90,7 @@ Ex:
     perfect([1, 8, 1])      // return true
     perfect([1, 10, 2, -3]) // return true
     perfect([2, 3, 4])      // return false
+
 ### `08 : Astronaut Santa`
 
 *25 Points*
@@ -148,7 +149,7 @@ You're given an array of numbers, each representing the distance you can move in
 Ex:
 
     jump([1, 1, 2])                 // returns true
-    jump([1, 2, 0, 3, 1, -1, 7])    // returns false
+    jump([1, 2, 0, 3, 1, -1, 7])    // returns true
     jump([1, 1, 2, 0])              // returns false
 
 ### `13 : Statue palace`
