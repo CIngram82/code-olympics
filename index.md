@@ -310,12 +310,12 @@ Write a function called map that accepts an array and a function as inputs. You 
 
 Ex:
 
-    function double(num) {
+    function square(num) {
         return num * num;
     }
 
-    map([1, 2, 4], double)  // return [2, 4, 8]
-    map[8, 6, 3], double)   // return [16, 12, 6]
+    map([1, 2, 4], square)  // return [2, 4, 16]
+    map[8, 6, 3], square)   // return [64, 36, 9]
 
 ### `26 : The gatekeeper`
 
