@@ -64,13 +64,13 @@ Ex:
 
 ### `05 : Fizzbuzz`
 
-*XX points*
+*25 points*
 
 Write a program that prints the numbers from 1 to 100. For multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print "FizzBuzz".
 
 ### `06 : Mind the gap`
 
-*XX points*
+*20 points*
 
 Given an array of numbers, return the difference between the smallest and largest numbers in the array.
 
@@ -81,7 +81,7 @@ Ex:
 
 ### `07 : A perfect 10`
 
-*XX points*
+*20 points*
 
 Given an array of numbers, return true if the numbers add up to 10 and false otherwise.
 
@@ -90,22 +90,19 @@ Ex:
     perfect([1, 8, 1])      // return true
     perfect([1, 10, 2, -3]) // return true
     perfect([2, 3, 4])      // return false
+### `08 : Astronaut Santa`
 
-### `08 : A perfect 10`
+*25 Points*
 
-*XX points*
-
-Given an array of numbers, return true if the numbers add up to 10 and false otherwise.
+Given a string, return true if the string is a palindrome, false otherwise. Ignore Spaces and capitalization.
 
 Ex:
 
-    perfect([1, 8, 1])      // return true
-    perfect([1, 10, 2, -3]) // return true
-    perfect([2, 3, 4])      // return false
+    palindrome('A Santa At NASA'); // returns true
 
 ### `09 : Cops and robbers`
 
-*XX points*
+*30 points*
 
 Your function should operate on a single string that contains a series of one of three characters:
 
@@ -123,7 +120,7 @@ Ex:
 
 ### `10 : Finding files`
 
-*XX points*
+*20 points*
 
 Given a string representing an absolute path on your computer, return the file name (drop all directory names).
 
@@ -134,7 +131,7 @@ Ex:
 
 ### `11 : Front and center`
 
-*XX points*
+*40 points*
 
 Given a title and subtitle as two separate strings,  return an array containing both strings padded with white space so that the text is centered. The output strings should be as short as possible.
 
@@ -144,7 +141,7 @@ Ex:
                 
 ### `12 : Jump game`
 
-*XX points*
+*60 points*
 
 You're given an array of numbers, each representing the distance you can move in the forward direction from your current position in the array. Return true if its possible to move from the first to the last element in the array using the specified jump distances, or false otherwise.
 
@@ -156,7 +153,7 @@ Ex:
 
 ### `13 : Statue palace`
 
-*XX points*
+*25 points*
 
 Everyone loves living near statues. Write a function that accepts a single string as an input and returns the number of 'desirable' houses, where 'desirable' is defined as being within two blocks of a statue. Each character represents a single block, with 'S' representing statues, 'L' representing lots, and 'H' representing houses.
 
@@ -168,7 +165,7 @@ Ex:
 
 ### `14 : Power bills`
 
-*XX points*
+*25 points*
 
 Sudenia lives in a pirate village and electricity is in short supply. It costs her one doubloon every hour that her lights are on, but she thinks her power company may be up to no good. She's started recording when she turns her lights on and off, and has enlistened your help for determining what her bill should be.
 
@@ -182,7 +179,7 @@ Ex:
 
 ### `15 : Semantic versioning`
 
-*XX points*
+*30 points*
 
 [Semantic versioning](https://nodesource.com/blog/semver-a-primer/#semverconstruction) is a popular standard for tracking software versions, and has a strict interpetation for each of the numbers in the version string. Write a function that determines which of two semantic version numbers (specified as strings) refer to the later release, and return that version number.
 
@@ -194,7 +191,7 @@ Ex:
 
 ### `16 : Junior`
 
-*XX points*
+*20 points*
 
 Find the second largest number in an array. If the largest value exists twice, it counts as both the largest and second largest value.
 
@@ -206,7 +203,7 @@ Ex:
 
 ### `17 : Rosebud`
 
-*XX points*
+*35 points*
 
 Some say that there was a cheat code for the original Sims that involved typing the phrase 'rosebud' followed by some number of exclamation points, followed by a 1. The cheat code would give one thousand credits for each exclamation point. Write a function that, when passed a string, returns the number of credits that the Sims would be rewarded with.
 
@@ -218,7 +215,7 @@ Ex:
 
 ### `18 : Changemaker`
 
-*XX points*
+*40 points*
 
 Given an amount of dollars, return the number of 20, 10, 5, and 1 dollar bills that should be returned to make change for the specified quantity. You should return the smallest number of bills possible.
 
@@ -230,7 +227,7 @@ Ex:
 
 ### `19 : Parentheses, please`
 
-*XX points*
+*45 points*
 
 Accept a string containing some combination of opening and closing parentheses. Return true if all parentheses are 'valid' and false otherwise. 
 
@@ -245,7 +242,7 @@ Ex:
 
 ### `20 : Count dupes`
 
-*XX points*
+*30 points*
 
 Count the number of duplicated items in an array. Return the number of items that were not the original appearance.
 
@@ -257,7 +254,7 @@ Ex:
 
 ### `21 : Doozy`
 
-*XX points*
+*25 points*
 
 Return the longest word in the specified sentence.
 
@@ -267,6 +264,8 @@ Ex:
     doozy('a lil fox can still run')                            // returns 'still'
 
 ### `22 : Multiples`
+
+*25 points*
 
 Given two numbers, return an array of all numbers from 1 - 100 that are evenly divisible by both.
 
@@ -278,6 +277,8 @@ Ex:
 
 ### `23 : Hamming`
 
+*20 points*
+
 Given two strings, return the number of letters that are in the same position in both words. If the strings are not the same length, return 0.
 
 Ex:
@@ -288,6 +289,8 @@ Ex:
 
 ### `24 : Catching Pokemon`
 
+*35 points*
+
 Write a function that accepts an array of numbers. Each element in the array represents a day, and the number represents the number of Pokemon caught on that day. Return an array of the same length that contains the number of total Pokemon caught up to that day.
 
 Ex:
@@ -297,6 +300,8 @@ Ex:
     pokemon([6, 2, 8, 1])   // return [6, 8, 16, 17]
 
 ### `25 : Mapping functions`
+
+*50 points*
 
 Write a function called map that accepts an array and a function as inputs. You should return an array containing the values of the array after the function has been applied to each one.
 
@@ -312,6 +317,8 @@ Ex:
     map[8, 6, 3], double)   // return [16, 12, 6]
 
 ### `26 : The gatekeeper`
+
+*50 points*
 
 Write a function called filter that accepts an array and a function as arguments. You should return an array containing the values of the array that return true after the function is applied.
 
