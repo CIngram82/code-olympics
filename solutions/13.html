@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>TIY Code Olympics: solution</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const code = document.querySelectorAll('pre code');
+            code.forEach(block => {
+                block.classList.add('javascript');
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+
+<body><h1>Solution: statue palace</h1>
+
+<pre><code>const STATUE = 'S';
+const HOUSE = 'H';
+
+function nearStatue(i, neighborhood) {
+    return neighborhood[i - 2] === STATUE
+        || neighborhood[i - 1] === STATUE 
+        || neighborhood[i + 1] === STATUE 
+        || neighborhood[i + 2] === STATUE;
+}
+
+function statues(neighborhood) {
+    let houses = 0;
+
+    for (let i = 0; i &lt; neighborhood.length; i++) {
+        if (neighborhood[i] === HOUSE &amp;&amp; nearStatue(i, neighborhood)) {
+            houses++;
+        }
+    }
+
+    return houses;
+}
+
+statues('SSHLHHHH')     // returns 1
+statues('HLHHSHLSH')    // returns 4
+statues('HLHLLS')       // returns 0
+</code></pre>
+    </body>
+</html> 

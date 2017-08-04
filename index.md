@@ -18,7 +18,7 @@ Have fun! Work with each other and the most important thing is that you keep gro
 
 ## Challenges
 
-### `01 : Letter count`
+### `01 : Letter count` - [solution](solutions/01.html)
 
 *10 points*
 
@@ -28,7 +28,7 @@ Example:
 
     letterCount('a', 'not again avery!'); // returns 3
 
-### `02 : Letter censor`
+### `02 : Letter censor` - [solution](solutions/02.html)
 
 *10 points*
 
@@ -36,9 +36,9 @@ Given a letter and sentence, output the original sentence with all occurences of
 
 Ex:
 
-    letterCount('a', 'not again avery!'); // returns 'not gin very!'
+    letterCensor('a', 'not again avery!'); // returns 'not gin very!'
 
-### `03 : Order from chaos`
+### `03 : Order from chaos` - [solution](solutions/03.html)
 
 *25 points*
 
@@ -50,7 +50,7 @@ Ex:
     chaos([1, 2, 3], [11, 2, 3]);       // returns false
     chaos([1, 2, 3], [3, 3, 2, 1]);     // returns false
 
-### `04 : Counting your chickens`
+### `04 : Counting your chickens` - [solution](solutions/04.html)
 
 *15 points*
 
@@ -62,13 +62,13 @@ Ex:
     chickens([1, 1, 2, 3, 4, 5]) // return true
     chickens([1, 2, 5, 4])       // return false
 
-### `05 : Fizzbuzz`
+### `05 : Fizzbuzz` - [solution](solutions/05.html)
 
 *25 points*
 
 Write a program that prints the numbers from 1 to 100. For multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print "FizzBuzz".
 
-### `06 : Mind the gap`
+### `06 : Mind the gap` - [solution](solutions/06.html)
 
 *20 points*
 
@@ -79,7 +79,7 @@ Ex:
     gap([1, 10, 6, 8, 2])   // return 9
     gap([1, 2, 3])          // return 2
 
-### `07 : A perfect 10`
+### `07 : A perfect 10` - [solution](solutions/07.html)
 
 *20 points*
 
@@ -91,7 +91,7 @@ Ex:
     perfect([1, 10, 2, -3]) // return true
     perfect([2, 3, 4])      // return false
 
-### `08 : Astronaut Santa`
+### `08 : Astronaut Santa` - [solution](solutions/08.html)
 
 *25 Points*
 
@@ -101,7 +101,7 @@ Ex:
 
     palindrome('A Santa At NASA'); // returns true
 
-### `09 : Cops and robbers`
+### `09 : Cops and robbers` - [solution](solutions/09.html)
 
 *30 points*
 
@@ -119,7 +119,7 @@ Ex:
 
     cops('#@#1###@@2#@'); // returns 3 (first robber escapes)
 
-### `10 : Finding files`
+### `10 : Finding files` - [solution](solutions/10.html)
 
 *20 points*
 
@@ -130,7 +130,7 @@ Ex:
     filename('/Users/summersanders/code/ambitions.txt') // returns 'ambitions.txt'
     filename('/Users/luke/cities.xls') // returns 'cities.xls'
 
-### `11 : Front and center`
+### `11 : Front and center` - [solution](solutions/11.html)
 
 *40 points*
 
@@ -138,9 +138,9 @@ Given a title and subtitle as two separate strings,  return an array containing 
 
 Ex:
 
-    padding('Jaws', 'Be Scared of Sharks!') // return ['Be Scared of Sharks!', '        Jaws        ']
+    padding('Jaws', 'Be Scared of Sharks!') // return ['        Jaws        ', 'Be Scared of Sharks!']
                 
-### `12 : Jump game`
+### `12 : Jump game` - [solution](solutions/12.html)
 
 *60 points*
 
@@ -152,7 +152,7 @@ Ex:
     jump([1, 2, 0, 3, 1, -1, 7])    // returns true
     jump([1, 1, 2, 0])              // returns false
 
-### `13 : Statue palace`
+### `13 : Statue palace` - [solution](solutions/13.html)
 
 *25 points*
 
@@ -164,7 +164,7 @@ Ex:
     statues('HLHHSHLSH')    // returns 4
     statues('HLHLLS')       // returns 0
 
-### `14 : Power bills`
+### `14 : Power bills` - [solution](solutions/14.html)
 
 *25 points*
 
@@ -178,7 +178,7 @@ Ex:
     doubloon('1--')         // returns 3
     doubloon('10---')       // returns 1
 
-### `15 : Semantic versioning`
+### `15 : Semantic versioning` - [solution](solutions/15.html)
 
 *30 points*
 
@@ -190,7 +190,7 @@ Ex:
     semver('1.2.0', '1.2.1')    // returns '1.2.1'
     semver('11.2.1', '2.1.10')  // returns '11.2.1'
 
-### `16 : Junior`
+### `16 : Junior` - [solution](solutions/16.html)
 
 *20 points*
 
@@ -202,7 +202,7 @@ Ex:
     junior([10, 14, 17, 9, 18]) // returns 17
     junior([1, 2, 3, 5, 5])     // returns 5
 
-### `17 : Rosebud`
+### `17 : Rosebud` - [solution](solutions/17.html)
 
 *35 points*
 
@@ -214,7 +214,7 @@ Ex:
     rosebud('rosebud!1')     // returns 1000
     rosebud('heathcliff')   // returns 0
 
-### `18 : Changemaker`
+### `18 : Changemaker` - [solution](solutions/18.html)
 
 *40 points*
 
@@ -226,7 +226,7 @@ Ex:
     changemaker(118)    // returns [5, 1, 1, 3]
     changemaker(12)     // returns [0, 1, 0, 2]
 
-### `19 : Parentheses, please`
+### `19 : Parentheses, please` - [solution](solutions/19.html)
 
 *45 points*
 
@@ -241,7 +241,7 @@ Ex:
     parens(')()()(')    // return false
     parens('(()()())')  // return true
 
-### `20 : Count dupes`
+### `20 : Count dupes` - [solution](solutions/20.html)
 
 *30 points*
 
@@ -253,7 +253,7 @@ Ex:
     dupes([1, 5, 2, 11])        // return 0
     dupes([1, 1, 1, 1]))        // return 3
 
-### `21 : Doozy`
+### `21 : Doozy` - [solution](solutions/21.html)
 
 *25 points*
 
@@ -264,7 +264,7 @@ Ex:
     doozy('there are a ton of contradictory things to debate')  // returns 'contradictory'
     doozy('a lil fox can still run')                            // returns 'still'
 
-### `22 : Multiples`
+### `22 : Multiples` - [solution](solutions/22.html)
 
 *25 points*
 
@@ -276,7 +276,7 @@ Ex:
     mults(2, 20)    // return [20, 40, 60, 80, 100]
     mults(20, 7)    // return []
 
-### `23 : Hamming`
+### `23 : Hamming` - [solution](solutions/23.html)
 
 *20 points*
 
@@ -288,7 +288,7 @@ Ex:
     hamming('abc', 'abcd')      // return 0
     hamming('tool', 'cold')     // return 1
 
-### `24 : Catching Pokemon`
+### `24 : Catching Pokemon` - [solution](solutions/24.html)
 
 *35 points*
 
@@ -300,7 +300,7 @@ Ex:
     pokemon([4, 4, 4])      // return [4, 8, 12]
     pokemon([6, 2, 8, 1])   // return [6, 8, 16, 17]
 
-### `25 : Mapping functions`
+### `25 : Mapping functions` - [solution](solutions/25.html)
 
 *50 points*
 
@@ -317,7 +317,7 @@ Ex:
     map([1, 2, 4], square)  // return [2, 4, 16]
     map[8, 6, 3], square)   // return [64, 36, 9]
 
-### `26 : The gatekeeper`
+### `26 : The gatekeeper` - [solution](solutions/26.html)
 
 *50 points*
 

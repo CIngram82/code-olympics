@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>TIY Code Olympics: solution</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const code = document.querySelectorAll('pre code');
+            code.forEach(block => {
+                block.classList.add('javascript');
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+
+<body><h1>Solution: A perfect 10</h1>
+
+<pre><code>function perfect(nums) {
+    let sum = 0;
+
+    for (let i = 0; i &lt; nums.length; i++) {
+        sum += nums[i];
+    }
+
+    return sum === 10;
+}
+
+perfect([1, 8, 1])      // return true
+perfect([1, 10, 2, -3]) // return true
+perfect([2, 3, 4])      // return false
+</code></pre>
+    </body>
+</html> 

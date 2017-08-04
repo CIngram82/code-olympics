@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>TIY Code Olympics: solution</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const code = document.querySelectorAll('pre code');
+            code.forEach(block => {
+                block.classList.add('javascript');
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+
+<body><h1>Solution: Jump game</h1>
+
+<pre><code>function jump(spaces) {
+    let current = 0;
+
+    for (let i = 0; i &lt; spaces.length; i++) {
+        if (current &lt; 0 || current &gt;= spaces.length) {
+            return false;
+        }
+
+        current += spaces[current];
+
+        if (current === spaces.length - 1) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+jump([1, 1, 2])                 // returns true
+jump([1, 2, 0, 3, 1, -1, 7])    // returns true
+jump([1, 1, 2, 0])              // returns false
+</code></pre>
+    </body>
+</html> 

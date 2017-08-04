@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>TIY Code Olympics: solution</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const code = document.querySelectorAll('pre code');
+            code.forEach(block => {
+                block.classList.add('javascript');
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+
+<body><h1>Solution: front and center</h1>
+
+<pre><code>/* Make an empty string of length 'num'. */
+function makePad(num) {
+    let pad = '';
+
+    for (let i = 0; i &lt; num; i++) {
+        pad += ' ';
+    }
+
+    return pad;
+}
+
+function padding(first, second) {
+    let target = Math.max(first.length, second.length);
+
+    // If the first string is shorter, add padding
+    if (first.length &lt; target) {
+        // Half the padding to the front, half to the back
+        const padSize = Math.floor((target - first.length) / 2);
+
+        first = makePad(padSize) + first + makePad(padSize);
+    // If the second string is shorter, add padding
+    } else if (second.length &lt; target) {
+        // Half the padding to the front, half to the back
+        const padSize = Math.floor((target - second.length) / 2);
+
+        second = makePad(padSize) + second + makePad(padSize);
+    }
+
+    return [first, second];
+}
+
+padding('Jaws', 'Be Scared of Sharks!') // return ['        Jaws        ', 'Be Scared of Sharks!']
+</code></pre>
+    </body>
+</html> 

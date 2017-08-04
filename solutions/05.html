@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>TIY Code Olympics: solution</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const code = document.querySelectorAll('pre code');
+            code.forEach(block => {
+                block.classList.add('javascript');
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+
+<body><h1>Solution: FizzBuzz</h1>
+
+<pre><code>function fizzbuzz() {
+    for (let i = 1; i &lt;= 100; i++) {
+        if (i % 3 === 0 &amp;&amp; i % 5 === 0) {
+            console.log('FizzBuzz');
+        } else if  (i % 3 === 0) {
+            console.log('Fizz')
+        } else if (i % 5 === 0) {
+            console.log('Buzz');
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+fizzbuzz()
+</code></pre>
+    </body>
+</html> 

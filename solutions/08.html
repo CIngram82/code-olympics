@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>TIY Code Olympics: solution</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const code = document.querySelectorAll('pre code');
+            code.forEach(block => {
+                block.classList.add('javascript');
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+
+<body><h1>Solution: Astronaut Santa</h1>
+
+<pre><code>function palindrome(words) {
+    words = words.toLowerCase().split(' ').join('');
+
+    for (let i = 0; i &lt; words.length; i++) {
+        let end = words.length - (i + 1);
+
+        if (words[i] !== words[end]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+palindrome('A Santa At NASA');
+</code></pre>
+    </body>
+</html> 

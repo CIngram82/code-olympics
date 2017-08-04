@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>TIY Code Olympics: solution</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const code = document.querySelectorAll('pre code');
+            code.forEach(block => {
+                block.classList.add('javascript');
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+
+<body><h1>Solution: cops and robbers</h1>
+
+<pre><code>/* Make my code easier to read w/ a constant */
+const THIEF = '@';
+
+/* Determine if the specified thief is visible to any cops */
+function isVisible(thief, full) {
+    for (let distance = 1; distance &lt; full.length; distance++) {
+        const forwardCop = parseInt(full[thief + distance]);
+        const backwardCop = parseInt(full[thief - distance]);
+
+        // look forward for a cop that can see me
+        if (forwardCop &amp;&amp; forwardCop &gt;= distance) {
+            return true;
+        }
+
+        if (backwardCop &amp;&amp; backwardCop &gt;= distance) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function cops(full) {
+    let visible = 0;
+    // 1. Find each thief
+    // 2. Determine if each can be seen
+    for (let i = 0; i &lt; full.length; i++) {
+        if (full[i] === THIEF &amp;&amp; isVisible(i, full)) {
+            visible++;
+        }
+    }
+
+    return visible;
+}
+
+cops('#@#1###@@2#@'); // returns 3 (first robber escapes)
+</code></pre>
+    </body>
+</html> 
